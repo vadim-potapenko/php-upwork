@@ -469,7 +469,7 @@ class OAuthRequester extends OAuthRequestSigner
 	
 		// first line of headers is the HTTP response code 
 		$http_line = array_shift($lines);
-		if (preg_match('@^HTTP/[0-9]\.[0-9] +([0-9]{3})@', $http_line, $matches))
+		if (preg_match('@^HTTP/[0-9]\.?[0-9]? +([0-9]{3})@', $http_line, $matches))
 		{
 			$code = $matches[1];
 		}
